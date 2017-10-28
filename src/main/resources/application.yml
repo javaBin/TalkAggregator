@@ -1,0 +1,3 @@
+elastic:
+  search:
+    url: http://localhost:9200
