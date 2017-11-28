@@ -5,7 +5,6 @@ import no.java.elasticsearch.domain.Talk
 import no.java.elasticsearch.service.ElasticSearchService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
-import java.time.LocalDate
 import javax.annotation.Resource
 
 @RestController
@@ -20,7 +19,7 @@ class HelloController {
     }
 
     @GetMapping("/talks")
-    fun getTalk() :Talk {
+    fun getTalk(): Talk {
         var talk = Talk("da event name",
                 "javazone_2098",
                 "43543523245234",
@@ -30,7 +29,6 @@ class HelloController {
                 "beginner",
                 60,
                 "en",
-
                 null,
                 null,
                 "2017-09-13T14:40:00Z",

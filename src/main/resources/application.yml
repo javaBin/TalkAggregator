@@ -1,3 +1,14 @@
 elastic:
   search:
     url: http://localhost:9200
+
+resttemplate:
+  timeout:
+    connectionRequestMs: 10000
+    connectionMs: 10000
+    readMs: 10000
+
+logging:
+  level:
+    root: INFO
+    no.java: TRACE

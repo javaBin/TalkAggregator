@@ -1,4 +1,4 @@
-package no.java.elasticsearch.domain
+package no.java.elasticsearch.domain.sleepingpill
 
 class SleepingPillSpeaker (/*
         "twitter": "@mon_beck",
