@@ -1,7 +1,9 @@
 elastic:
   search:
     url: http://localhost:9200
-
+sleepingpill:
+   base:
+     url: https://sleepingpill.javazone.no/public/
 resttemplate:
   timeout:
     connectionRequestMs: 10000
