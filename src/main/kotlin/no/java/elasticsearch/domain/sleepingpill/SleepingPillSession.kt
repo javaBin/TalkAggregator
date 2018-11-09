@@ -5,25 +5,24 @@ import no.java.elasticsearch.domain.Talk
 import java.util.Date
 
 data class SleepingPillSession(
-        var intendedAudience: String?,
-        var endTimeZulu: String,
-        var level: String,
-        var length: Int,
-        var format: String,
-        var language: String,
-        var sessionId: String,
-        var video: String?,
-        var abstract: String,
-        var title: String,
-        var speakernoteUrl: String?,
-        var room: String?,
-        var conferenceId: String,
-        var startTimeZulu: String,
-        var speakers: Array<Speaker>,
-        var startTime: Date,
-        var endTime: Date
+        val intendedAudience: String?,
+        val endTimeZulu: String?,
+        val level: String?,
+        val length: Int,
+        val format: String,
+        val language: String,
+        val sessionId: String,
+        val video: String?,
+        val abstract: String?,
+        val title: String,
+        val speakernoteUrl: String?,
+        val room: String?,
+        val conferenceId: String,
+        val startTimeZulu: String?,
+        val speakers: Array<Speaker>,
+        val startTime: Date?,
+        val endTime: Date?
 ) {
-
     fun convertToTalk(eventName:String) : Talk {
         return Talk(eventName = eventName, talkId=sessionId, abstract = abstract, startTime = convertToZuluTime(startTime),
                 endTime = convertToZuluTime(endTime), language = language, level = level,
@@ -31,7 +30,7 @@ data class SleepingPillSession(
                 title = title, videoUrl = video, eventDataUrl = "", lengthMinutes = null, eventId = conferenceId)
     }
 
-    fun convertToZuluTime(date : Date) :String {
-        return date.toString()
-    }
+}
+fun convertToZuluTime(date : Date?) :String? {
+    return date?.toString()
 }

@@ -3,13 +3,17 @@ elastic:
     url: http://localhost:9200
 sleepingpill:
    base:
-     url: https://sleepingpill.javazone.no/public/
+     url: https://sleepingpill.javazone.no/
 resttemplate:
   timeout:
     connectionRequestMs: 10000
     connectionMs: 10000
     readMs: 10000
 
+com.auth0:
+  domain: javabin.eu.auth0.com
+  clientId: 6cDOYLgCU1XeIhdC8tjhpbo8W3HELTQf
+  clientSecret: i2UaSGvTt9qaQ2Tw-qw0VwW1U_YtuRQhhmRXP29bUT8Pf25Npk_HnnasSOkrVe1A
 logging:
   level:
     root: INFO
