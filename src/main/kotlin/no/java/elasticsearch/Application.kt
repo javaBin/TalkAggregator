@@ -6,7 +6,6 @@ import org.springframework.context.annotation.ComponentScan
 import java.net.InetAddress
 
 @SpringBootApplication
-@ComponentScan("no.java.elasticsearch")
 class Application
 
 fun main(args: Array<String>) {
